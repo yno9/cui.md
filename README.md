@@ -6,7 +6,7 @@ A portable text editor packed into a single HTML file. Works offline via FSAA (F
 
 ## Getting started
 
-- **FSAA (local) mode** : Download and open [docs/index.html](https://github.com/yno9/cui.m/blob/main/docs/index.html) or try [cui.md](https://cui.md) in any Chromium browser (Chrome, Vivaldi, Edge).
+- **FSAA (local) mode** : Download and open [docs/index.html](https://github.com/yno9/cui.m/blob/main/docs/index.html) or try [cui.md](https://cui.md) in any Chromium browser.
 - **WebDAV (remote) mode** : Serve `docs/index.html` over HTTP and expose a WebDAV endpoint at `/dav/`.
 
 ## Features

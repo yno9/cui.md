@@ -391,7 +391,8 @@ async function openOrRestoreWorkspace(forceNew = false) {
 // Expose for use from ui.ts (star button)
 (window as any).openOrRestoreWorkspace = openOrRestoreWorkspace;
 
-document.getElementById('workspace-picker')!.onclick = async () => {
+document.getElementById('picker-change-btn')!.addEventListener('click', async (e) => {
+  e.stopPropagation();
   if (st.savedHandleForResume) {
     try {
       const perm = await st.savedHandleForResume.requestPermission({ mode: 'readwrite' });
@@ -405,12 +406,6 @@ document.getElementById('workspace-picker')!.onclick = async () => {
     } catch {}
     st.savedHandleForResume = null;
   }
-  openOrRestoreWorkspace(true);
-};
-
-document.getElementById('picker-change-btn')!.addEventListener('click', (e) => {
-  e.stopPropagation();
-  st.savedHandleForResume = null;
   openOrRestoreWorkspace(true);
 });
 
