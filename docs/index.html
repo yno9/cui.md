@@ -1038,13 +1038,11 @@ html[data-cm5="false"] body {
 [data-cm5="false"] #editor {
   display: block;
   width: 100%;
-  max-width: 100ch;
-  margin-inline: auto;
   box-sizing: border-box;
   height: 100vh;
   overflow: auto;
   font-family: inherit;
-  padding: var(--editor-pad-block-start) var(--editor-pad-inline) var(--editor-pad-block-end);
+  padding: var(--editor-pad-block-start) max(var(--editor-pad-inline), calc((100% - 100ch) / 2)) var(--editor-pad-block-end);
   resize: none;
   outline: none;
 }
